@@ -1,4 +1,4 @@
-# Frontend Basics – Interview Ready (Simple & Direct)
+# Frontend Basics – Interview Ready 
 
 ---
 
@@ -19,12 +19,12 @@ You control the flow. You call the library when needed.
 Example: React
 
 **Framework:**  
-Framework controls the flow. You follow its structure.  
+Framework controls the flow. You must follow its structure.  
 Example: Angular
 
 **One-liner:**  
-Library → *You call it*  
-Framework → *It calls you*
+Library → You call it  
+Framework → It calls you
 
 ---
 
@@ -33,21 +33,34 @@ CDN (Content Delivery Network) is a network of servers that delivers files from 
 
 **Why CDN?**
 - Faster loading
-- Less server load
+- Reduced server load
 - Better performance
 
 ---
 
-## 4. Why is React called React?
-React is called React because it **reacts to changes in state** and updates the UI automatically.
+## 4. What is React JS?
+React JS is a **JavaScript library** used to build **fast and interactive user interfaces**, mainly for single-page applications.
 
-**Key point:**  
-UI changes when data changes.
+**Key points:**
+- Component-based
+- Uses Virtual DOM
+- UI updates when state changes
+
+**One-liner:**
+React JS is a library for building reusable UI components efficiently.
 
 ---
 
-## 5. What is `crossorigin` in script tag?
-`crossorigin` allows a browser to load scripts from **another domain safely**.
+## 5. Why is React called React?
+React is called React because it **reacts to changes in state or data** and updates the UI automatically.
+
+**Key idea:**  
+UI is a function of state.
+
+---
+
+## 6. What is `crossorigin` in script tag?
+`crossorigin` allows the browser to load scripts from **another domain safely**.
 
 **Why needed?**
 - Proper error reporting
@@ -56,21 +69,21 @@ UI changes when data changes.
 
 ---
 
-## 6. Difference Between React and ReactDOM
+## 7. Difference Between React and ReactDOM
 
 **React:**  
-Used to create components, manage state and logic.
+Used to create components, manage state, and application logic.
 
 **ReactDOM:**  
 Used to render React components into the browser DOM.
 
-**Simple:**  
-React = *What to build*  
-ReactDOM = *Where to show*
+**Simple:**
+React → What to build  
+ReactDOM → Where to show
 
 ---
 
-## 7. react.development.js vs react.production.js
+## 8. react.development.js vs react.production.js
 
 **Development build:**
 - Used while learning/debugging
@@ -78,7 +91,7 @@ ReactDOM = *Where to show*
 - Slower
 
 **Production build:**
-- Used in live projects
+- Used in live applications
 - Optimized and fast
 - No warnings
 
@@ -87,11 +100,11 @@ Never use development build in production.
 
 ---
 
-## 8. async vs defer
+## 9. async vs defer
 
 ### async
 - Script loads and runs immediately
-- Order not guaranteed
+- Execution order not guaranteed
 - DOM may not be ready
 
 **Use for:** Analytics, ads
@@ -101,12 +114,13 @@ Never use development build in production.
 ### defer
 - Script loads in background
 - Runs after HTML loads
-- Order preserved
+- Execution order preserved
 
 **Use for:** Main application scripts
 
 ---
 
 ### One-line Difference
-**async:** Fast but unpredictable  
-**defer:** Safe and predictable
+async → Fast but unpredictable  
+defer → Safe and predictable
+
