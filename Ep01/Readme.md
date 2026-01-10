@@ -110,5 +110,3 @@ Never use development build in production.
 ### One-line Difference
 **async:** Fast but unpredictable  
 **defer:** Safe and predictable
-
----
