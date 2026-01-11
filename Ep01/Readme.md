@@ -1,4 +1,4 @@
-# Frontend Basics – Interview Ready 
+# Frontend Basics – Interview Ready of Ep01 - Inception
 
 ---
 
