@@ -1,4 +1,4 @@
-# Frontend Basics – Interview Ready of Ep03 – Laying the Foundation
+# Ep03 – Laying the Foundation
 
 ---
 
