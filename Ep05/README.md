@@ -70,7 +70,7 @@ import { useState } from "react";
 
 ---
 
-9. Important React Hooks
+## 9. Important React Hooks
 
 - useState → Manage state
 - useEffect → Side effects (API calls, subscriptions)
