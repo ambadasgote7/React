@@ -1,5 +1,6 @@
 ## Ep07 - Finding the Path
 
+----
 
 ## **1. What are various ways to add images to our app?**
 
