@@ -1,5 +1,242 @@
 ## Ep08 - Let's get classy
 
+---
+## Create a Class-Based Component
+
+A class-based component is created by extending `React.Component`.
+
+React creates an **instance of the class** when the component loads.
+
+`class UserClass extends React.Component {
+
+  render() {
+
+    return <h1>Hello</h1>;
+
+  }
+
+}`
+
+-------
+
+## Loading Functional vs Class-Based Component
+
+Loading a **functional component** means invoking a function.
+
+Loading a **class-based component** means creating an instance of the class.
+
+`// Functional
+
+function User() {
+
+  return <h1>User</h1>;
+
+}
+
+// Class-based
+
+class UserClass extends React.Component {
+
+  render() {
+
+    return <h1>User</h1>;
+
+  }
+
+}`
+
+-----
+
+## Creating State Variables in Class-Based Components
+
+In class components, state is initialized **inside the constructor** using `this.state`.
+
+`class Counter extends React.Component {
+
+  constructor(props) {
+
+    super(props);
+
+    this.state = { count: 0 };
+
+  }
+
+  render() {
+
+    return <h1>{this.state.count}</h1>;
+
+  }
+
+}`
+
+----
+
+## Accessing and Destructuring State
+
+Instead of repeatedly using `this.state.count`,
+
+we can destructure state variables for cleaner code.
+
+`const { count } = this.state;`
+
+----
+
+## Updating State Variables in Class Components
+
+We update state using `this.setState()`.
+
+React **merges state**, it does not replace it.
+
+`this.setState({ count: this.state.count + 1 });`
+
+----
+
+## What if a Component Has Multiple State Variables?
+
+If you update **one state variable**, React does **not affect the others**.
+
+`this.state = {
+
+  count: 0,
+
+  name: "Aditya"
+
+};
+
+this.setState({ count: 1 }); // name remains unchanged`
+
+-----
+
+## What Does "Loading a Component" Mean?
+
+Loading a component means **mounting it to the DOM**.
+
+For class components, this triggers lifecycle methods.
+
+----
+
+## What Happens When a Class Component Loads?
+
+When a class component is instantiated:
+
+1\.  `constructor()` is called
+
+2\.  `render()` is called
+
+`constructor() {}
+
+render() {}`
+
+----
+
+## How Does `componentDidMount` Execute? (Parent → Child)
+
+Execution order when a parent renders a child:
+
+`Constructor (Parent)
+
+Render (Parent)
+
+Constructor (Child)
+
+Render (Child)
+
+componentDidMount (Child)
+
+componentDidMount (Parent)`
+
+`class Parent extends React.Component {
+
+  componentDidMount() {
+
+    console.log("Parent mounted");
+
+  }
+
+}`
+
+----
+
+## What If Parent Has Multiple Children?
+
+React completes **all render work first**, then runs `componentDidMount`.
+
+Execution order:
+
+`Constructor (Parent)
+
+Render (Parent)
+
+Constructor (Child 1)
+
+Render (Child 1)
+
+Constructor (Child 2)
+
+Render (Child 2)
+
+componentDidMount (Child 1)
+
+componentDidMount (Child 2)
+
+componentDidMount (Parent)`
+
+----
+
+## React Lifecycle Phases
+
+----------------------
+
+There are **two phases**:
+
+### 1\. Render Phase
+
+-   `constructor`
+
+-   `render`
+
+### 2\. Commit Phase
+
+-   `componentDidMount`
+
+-   DOM updates happen here
+
+-----
+
+Why Is `componentDidMount` Called After All Renders?
+
+DOM updates are **expensive**.
+
+React batches all render work first, then updates the DOM once.
+
+That's why:
+
+-   All constructors & renders run first
+
+-   `componentDidMount` runs last
+
+----
+
+## Why Is `componentDidMount` Used for API Calls?
+
+Because:
+
+-   DOM is ready
+
+-   Component is mounted
+
+-   Safe place for side effects
+
+`componentDidMount() {
+
+  fetch("/api/data")
+
+    .then(res => res.json())
+
+    .then(data => this.setState({ data }));
+
+}`
+
 ----
 
  ### Q: How do you create Nested Routes using `react-router-dom`?
