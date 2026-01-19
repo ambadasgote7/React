@@ -1,6 +1,7 @@
 ## Ep08 - Let's get classy
 
 ---
+
 ## Create a Class-Based Component
 
 A class-based component is created by extending `React.Component`.
