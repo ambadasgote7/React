@@ -234,20 +234,17 @@ function Layout() {
 ---
 
 ### Q: What is `createHashRouter`?
+- `createHashRouter` uses the URL **hash (`#`)** to manage routes.
+- It's useful when the server does not support browser history routing.
 
-`createHashRouter` uses the URL **hash (`#`)** to manage routes.
-
-It's useful when the server does not support browser history routing.
-
-`const router = createHashRouter([
-
+```js
+const router = createHashRouter([
   { path: "/", element: <Home /> },
-
   { path: "/about", element: <About /> }
+]);
+```
 
-]);`
-
-* * * * *
+---
 
 ### Q: What is `createMemoryRouter`?
 - `createMemoryRouter` stores routing history **in memory**, not in the URL.
