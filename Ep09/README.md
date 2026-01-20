@@ -1,4 +1,4 @@
-## Ep09 - Optimizing our App
+## Ep09 - Optimizing the App 
 
 ---
 
