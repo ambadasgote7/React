@@ -6,7 +6,7 @@
 The Single Responsibility Principle states that a function, class, or component should have only one responsibility. If a component does multiple things, it should be broken into smaller components, each handling one task.
 
 **Example:**
-A **<Header />** component should only be responsible for displaying the header, not fetching data or handling business logic.
+A `<Header />` component should only be responsible for displaying the header, not fetching data or handling business logic.
 
 ---
 
