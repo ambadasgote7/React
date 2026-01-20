@@ -52,7 +52,7 @@ Custom hooks are used for:
 
 ---
 
-5. Example: Separating logic using a Custom Hook
+## 5. Example: Separating logic using a Custom Hook
 
 ❌ Before (Component does two jobs)
 
